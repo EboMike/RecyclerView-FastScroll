@@ -9,6 +9,7 @@ android {
     lint {
         abortOnError false
     }
+    namespace 'com.simplecityapps.recyclerview_fastscroll'
 
 }
 
