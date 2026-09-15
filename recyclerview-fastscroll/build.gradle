@@ -17,10 +17,10 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     //RecyclerView
-    implementation 'androidx.recyclerview:recyclerview:1.4.0'
+    implementation libs.androidx.recyclerview
 
     // AppCompat
-    implementation 'androidx.appcompat:appcompat:1.8.0'
+    implementation libs.androidx.appcompat
 }
 
 //To deploy, re-comment following line & run ./gradlew clean assembleRelease install bintrayUpload
