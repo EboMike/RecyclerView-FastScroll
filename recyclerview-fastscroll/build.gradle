@@ -7,9 +7,9 @@ android {
         minSdkVersion 24
     }
     lint {
-        abortOnError false
+        abortOnError = false
     }
-    namespace 'com.simplecityapps.recyclerview_fastscroll'
+    namespace = 'com.simplecityapps.recyclerview_fastscroll'
 
 }
 
