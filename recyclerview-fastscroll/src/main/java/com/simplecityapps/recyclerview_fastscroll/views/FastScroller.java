@@ -52,29 +52,29 @@ import static java.lang.annotation.RetentionPolicy.SOURCE;
 public class FastScroller {
     private static final int DEFAULT_AUTO_HIDE_DELAY = 1500;
 
-    private FastScrollRecyclerView mRecyclerView;
-    private FastScrollPopup mPopup;
+    private final FastScrollRecyclerView mRecyclerView;
+    private final FastScrollPopup mPopup;
 
-    private int mThumbHeight;
+    private final int mThumbHeight;
     private int mThumbWidth;
-    private Paint mThumb;
+    private final Paint mThumb;
 
-    private Paint mTrack;
+    private final Paint mTrack;
     private int mTrackWidth;
 
-    private Rect mTmpRect = new Rect();
-    private Rect mInvalidateRect = new Rect();
-    private Rect mInvalidateTmpRect = new Rect();
+    private final Rect mTmpRect = new Rect();
+    private final Rect mInvalidateRect = new Rect();
+    private final Rect mInvalidateTmpRect = new Rect();
 
     // The inset is the buffer around which a point will still register as a click on the scrollbar
-    private int mTouchInset;
+    private final int mTouchInset;
 
     // This is the offset from the top of the scrollbar when the user first starts touching.  To
     // prevent jumping, this offset is applied as the user scrolls.
     private int mTouchOffset;
 
-    private Point mThumbPosition = new Point(-1, -1);
-    private Point mOffset = new Point(0, 0);
+    private final Point mThumbPosition = new Point(-1, -1);
+    private final Point mOffset = new Point(0, 0);
 
     private boolean mIsDragging;
 
@@ -88,7 +88,7 @@ public class FastScroller {
     private int mThumbInactiveColor = 0x79000000;
     private boolean mThumbInactiveState;
 
-    private int mTouchSlop;
+    private final int mTouchSlop;
 
     private int mLastY;
 

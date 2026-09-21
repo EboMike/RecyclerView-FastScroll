@@ -17,7 +17,7 @@
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
-def Properties bintrayProps = new Properties()
+Properties bintrayProps = new Properties()
 File bintrayProperties = file('bintray.properties')
 if (bintrayProperties.exists()) {
     bintrayProps.load(new FileInputStream(bintrayProperties))

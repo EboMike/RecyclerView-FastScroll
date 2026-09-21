@@ -33,28 +33,28 @@ import androidx.annotation.Keep;
 
 public class FastScrollPopup {
 
-    private FastScrollRecyclerView mRecyclerView;
+    private final FastScrollRecyclerView mRecyclerView;
 
-    private Resources mRes;
+    private final Resources mRes;
 
     private int mBackgroundSize;
     private int mCornerRadius;
 
-    private Path mBackgroundPath = new Path();
-    private RectF mBackgroundRect = new RectF();
-    private Paint mBackgroundPaint;
+    private final Path mBackgroundPath = new Path();
+    private final RectF mBackgroundRect = new RectF();
+    private final Paint mBackgroundPaint;
     private int mBackgroundColor = 0xff000000;
 
-    private Rect mInvalidateRect = new Rect();
-    private Rect mTmpRect = new Rect();
+    private final Rect mInvalidateRect = new Rect();
+    private final Rect mTmpRect = new Rect();
 
     // The absolute bounds of the fast scroller bg
-    private Rect mBgBounds = new Rect();
+    private final Rect mBgBounds = new Rect();
 
     private String mSectionName;
 
-    private Paint mTextPaint;
-    private Rect mTextBounds = new Rect();
+    private final Paint mTextPaint;
+    private final Rect mTextBounds = new Rect();
 
     private float mAlpha = 1;
 
