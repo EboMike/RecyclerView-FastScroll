@@ -16,6 +16,8 @@
 
 package com.simplecityapps.recyclerview_fastscroll.views;
 
+import static java.lang.annotation.RetentionPolicy.SOURCE;
+
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
@@ -32,12 +34,6 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.ViewConfiguration;
 
-import com.simplecityapps.recyclerview_fastscroll.R;
-import com.simplecityapps.recyclerview_fastscroll.interfaces.OnFastScrollStateChangeListener;
-import com.simplecityapps.recyclerview_fastscroll.utils.Utils;
-
-import java.lang.annotation.Retention;
-
 import androidx.annotation.ColorInt;
 import androidx.annotation.IntDef;
 import androidx.annotation.Keep;
@@ -46,7 +42,11 @@ import androidx.interpolator.view.animation.FastOutLinearInInterpolator;
 import androidx.interpolator.view.animation.LinearOutSlowInInterpolator;
 import androidx.recyclerview.widget.RecyclerView;
 
-import static java.lang.annotation.RetentionPolicy.SOURCE;
+import com.simplecityapps.recyclerview_fastscroll.R;
+import com.simplecityapps.recyclerview_fastscroll.interfaces.OnFastScrollStateChangeListener;
+import com.simplecityapps.recyclerview_fastscroll.utils.Utils;
+
+import java.lang.annotation.Retention;
 
 @SuppressWarnings("WeakerAccess")
 public class FastScroller {

@@ -27,9 +27,9 @@ import android.graphics.RectF;
 import android.graphics.Typeface;
 import android.text.TextUtils;
 
-import com.simplecityapps.recyclerview_fastscroll.utils.Utils;
-
 import androidx.annotation.Keep;
+
+import com.simplecityapps.recyclerview_fastscroll.utils.Utils;
 
 public class FastScrollPopup {
 

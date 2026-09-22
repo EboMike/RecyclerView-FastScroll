@@ -26,16 +26,16 @@ import android.util.SparseIntArray;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.simplecityapps.recyclerview_fastscroll.R;
-import com.simplecityapps.recyclerview_fastscroll.interfaces.OnFastScrollStateChangeListener;
-import com.simplecityapps.recyclerview_fastscroll.utils.Utils;
-
 import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.simplecityapps.recyclerview_fastscroll.R;
+import com.simplecityapps.recyclerview_fastscroll.interfaces.OnFastScrollStateChangeListener;
+import com.simplecityapps.recyclerview_fastscroll.utils.Utils;
 
 public class FastScrollRecyclerView extends RecyclerView implements RecyclerView.OnItemTouchListener {
 
