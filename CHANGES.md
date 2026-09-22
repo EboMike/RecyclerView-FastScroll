@@ -62,7 +62,8 @@
 
 1.0.13
 
-- Added option to position the FastScroll-Popup in the center of the RecyclerView (rather than tracking adjacent to the FastScroll thumb)
+- Added option to position the FastScroll-Popup in the center of the RecyclerView (rather than
+  tracking adjacent to the FastScroll thumb)
 
 1.0.12
 
@@ -85,7 +86,10 @@ v1.0.9
 
 - Updated gradle & dependencies
 - Fixed crash when no adapter was set on the `RecyclerView`
-- Fixed crash when `RecyclerView` children are null (`itemCount` is non zero, but `getChildAt(0)` returns null).
+- Fixed crash when `RecyclerView` children are null (`itemCount` is non zero, but `getChildAt(0)`
+  returns null).
 
 v1.0.6
-- The `FastScrollPopup` no longer requires your adapter to implement `SectionIndexer`, but rather `FastScrollRecyclerView.SectionedAdapter`, which is much easier to use.
+
+- The `FastScrollPopup` no longer requires your adapter to implement `SectionIndexer`, but rather
+  `FastScrollRecyclerView.SectionedAdapter`, which is much easier to use.

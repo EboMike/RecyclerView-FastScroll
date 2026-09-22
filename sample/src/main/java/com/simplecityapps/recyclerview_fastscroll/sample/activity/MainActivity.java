@@ -18,6 +18,7 @@ package com.simplecityapps.recyclerview_fastscroll.sample.activity;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -31,43 +32,44 @@ import com.simplecityapps.recyclerview_fastscroll.sample.fragment.SimpleFragment
 
 public class MainActivity extends AppCompatActivity {
 
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+
+    setContentView(R.layout.activity_main);
+
+    ViewPager viewPager = findViewById(R.id.viewPager);
+    viewPager.setAdapter(new PagerAdapter(getSupportFragmentManager()));
+  }
+
+  private static class PagerAdapter extends FragmentPagerAdapter {
+
+    PagerAdapter(FragmentManager fm) {
+      super(fm);
+    }
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        setContentView(R.layout.activity_main);
-
-        ViewPager viewPager = findViewById(R.id.viewPager);
-        viewPager.setAdapter(new PagerAdapter(getSupportFragmentManager()));
+    public Fragment getItem(int position) {
+      switch (position) {
+        case 0:
+          return new SimpleFragment();
+        case 1:
+          return new MultiViewTypeFragment();
+      }
+      throw new IllegalArgumentException(String.format("No fragment returned for position: %d",
+          position));
     }
 
-    private static class PagerAdapter extends FragmentPagerAdapter {
-
-        PagerAdapter(FragmentManager fm) {
-            super(fm);
-        }
-
-        @Override
-        public Fragment getItem(int position) {
-            switch (position) {
-                case 0:
-                    return new SimpleFragment();
-                case 1:
-                    return new MultiViewTypeFragment();
-            }
-            throw new IllegalArgumentException(String.format("No fragment returned for position: %d", position));
-        }
-
-        @Override
-        public int getCount() {
-            return 2;
-        }
-
-        @SuppressLint("DefaultLocale")
-        @Nullable
-        @Override
-        public CharSequence getPageTitle(int position) {
-            return String.format("Page %d", position + 1);
-        }
+    @Override
+    public int getCount() {
+      return 2;
     }
+
+    @SuppressLint("DefaultLocale")
+    @Nullable
+    @Override
+    public CharSequence getPageTitle(int position) {
+      return String.format("Page %d", position + 1);
+    }
+  }
 }
